@@ -1,0 +1,28 @@
+* {
+    font-family: monospace;
+}
+
+body {
+    background: blue;
+    color: green;
+}
+
+div {
+ color: blueviolet;
+}
+
+h2 {
+    color:#ee162d;
+}
+
+.coral-color {
+    color:coral;
+}
+
+.medium-size {
+    width: 20px;
+}
+
+#content {
+    color:darkmagenta;
+}
