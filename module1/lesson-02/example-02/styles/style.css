@@ -1,0 +1,52 @@
+/* color scheme --> https://coolors.co/f7ebec-ddbdd5-ac9fbb-59656f-1d1e2c */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1D1E2C;
+}
+
+nav, footer {
+    background-color: #1D1E2C;
+    color: #F7EBEC;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    width: inherit;
+    text-align: center;
+    display: block;
+}
+
+li:hover {
+    background-color: #AC9FBB;
+    color: #1D1E2C;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#home, #teacher, #teaching-assistant, #contact {
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+    text-align: center;
+}
+
+footer {
+    height: 100px;
+}
+
+#footer-content {
+    text-align: center;
+}
+
+#profile-picture, #breakfast-picture {
+    border-radius: 90%;
+    margin: 0 auto;
+}

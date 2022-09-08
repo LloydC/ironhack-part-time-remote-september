@@ -1,0 +1,102 @@
+/* color scheme --> https://coolors.co/f7ebec-ddbdd5-ac9fbb-59656f-1d1e2c */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1D1E2C;
+}
+
+nav, footer {
+    background-color: #1D1E2C;
+    color: #F7EBEC;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    text-align: center;
+}
+
+li:hover {
+    background-color: #AC9FBB;
+    color: #1D1E2C;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#home, #curriculum {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+.container {
+    height: 400px;
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid black; */
+    margin-top: 50px;
+}
+
+.teacher {
+    width:400px;
+    height: auto;
+    text-align: center;
+    border: 1px solid black;
+}
+
+
+footer {
+    width: 100vw;
+    height: 80px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+#footer-content {
+    text-align: center;
+}
+
+.profile-picture {
+    border-radius: 90%;
+    margin: 0 auto;
+}
+
+iframe {
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+    opacity: 0.8;
+}
+
+.video-wrapper {
+    width: 100vw;
+    height: 600px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: -200;
+}
+
+.header{
+    position: relative;
+    color: white;
+    text-shadow: 1px 1px 8px rgba(0,0,0,0.6);
+}
+
+.module {
+    width: 500px;
+    height: 500px;
+}
