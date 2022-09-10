@@ -38,15 +38,28 @@ a {
 .container {
     height: 400px;
     display: flex;
-    justify-content: space-around;
-    margin-top: 50px;
+    justify-content: space-evenly;
+
+    /* flex-direction: column;
+    align-items: center; */
 }
+
+/* .layoutOne {
+    display: flex;
+    justify-content: space-around;
+}
+
+.layoutTwo {
+    display: flex;
+    flex-flow: column wrap;
+} */
 
 .teacher {
     width:400px;
     height: auto;
     text-align: center;
-    /* border: 1px solid black; */
+    padding-top: 40px;
+    border: 1px solid black;
 }
 
 
@@ -56,15 +69,22 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #footer-content {
-    text-align: center;
+    /* text-align: center; */
 }
 
 .profile-picture {
     border-radius: 90%;
     margin: 0 auto;
+    /* margin-top: 0;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto; */
 }
 
 iframe {

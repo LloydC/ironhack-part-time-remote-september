@@ -1,0 +1,39 @@
+/* colors palette ---> https://coolors.co/f5e6e8-d5c6e0-aaa1c8-967aa1-192a51 */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #f5e6e8;
+}
+
+nav, footer {
+    width: 100vw;
+    background-color: #192A51;
+    color: #f5e6e8;
+}
+
+ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+li {
+    width: 100%;
+    text-align: center;
+}
+
+li:hover {
+    background-color: #967AA1;
+    color: black;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#footer-content {
+    text-align: center;
+}
