@@ -1,4 +1,7 @@
 /* colors palette ---> https://coolors.co/f5e6e8-d5c6e0-aaa1c8-967aa1-192a51 */
+html {
+    font-size: 10px;
+}
 
 body {
     font-family: Arial, Helvetica, sans-serif;
@@ -36,4 +39,30 @@ a {
 
 #footer-content {
     text-align: center;
+}
+
+footer { 
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+/* media query for mobile screens  */
+@media only screen and (max-width: 464px) { 
+    body {
+        background: red;
+    }
+}
+/* media query for tablet screens  */
+@media only screen and (min-width: 464px) and (max-width: 768px){ 
+    body {
+        background: blue;
+    }
+}
+
+/* media query for desktop screens  */
+@media only screen and (min-width: 768px) { 
+    body {
+        background: green;
+    }
 }
