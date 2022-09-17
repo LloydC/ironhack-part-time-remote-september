@@ -7,8 +7,6 @@ const students = [
     { name: "Sarah", age: 20 },
     { name: "Bill", age: 19 }
   ];
-  console.log(students[0].name);
-  console.log(students[3].age);
 
 // Get the value Bill to display
 // Get the value Thomas to display
@@ -17,8 +15,7 @@ const students = [
     ["Lilly", "Sarah", "Bill"],
     ["Thomas", "Barry", "Alex"]
   ];
-  console.log(twoD[1][2]);
-  console.log(twoD[2][0]);
+
   // Student example with multiple classrooms
 
   // Retrieve the second “classroom” of students
@@ -63,22 +60,7 @@ const students = [
     ]
   ];
 
-  // console.log(classes[1]);
-  // console.log(classes[4][0].firstName);
-  // console.log(classes[1][3].age);
-  // console.log(classes[4][4].lastName)
 
-  // for(let i = 0; i < classes.length; i++){ 
-  //   for(let j = 0; j < classes[i].length; j++){
-  //     console.log(classes[i][j].age);
-  //   }
-  // }
-
-  // classes.forEach(classRoom => classRoom.forEach(student => {
-  //   if(student.firstName === 'Antonette'){
-  //     console.log(student);
-  //   }
-  // }))
 
 
 // get the city value from classroom
@@ -95,18 +77,6 @@ const students = [
       }
     }
   };
-
-  // for(let prop in classRoom){
-  //   for(let prop2 in prop){
-  //     console.log(prop[prop2]);
-  //     for(let prop3 in prop2){
-  //       console.log(prop2[prop3])
-  //     }
-  //    }
-  // }
-
-  // console.log(classRoom.teacher.address.city);
-  // console.log(classRoom.teacher.age);
 
   // Classroom System Example
 
