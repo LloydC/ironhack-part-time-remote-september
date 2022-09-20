@@ -5,6 +5,17 @@ const firstVegetable = {
     price: 0.75,
     quantity: 30
 }
+firstVegetable.name = 'aubergine'
+for (let propertyName in firstVegetable) {
+    console.log(firstVegetable[propertyName]);
+  }
+const checkPropertyName = firstVegetable.hasOwnProperty('weight');
+// console.log('checkPropertyName: ', checkPropertyName)
+const firstVegetableProperties = Object.keys(firstVegetable);
+const firstVegetableValues = Object.values(firstVegetable);
+
+// console.log('Keys in firstVegetable:' , firstVegetableProperties)
+// console.log('Values in firstVegetable:' , firstVegetableValues)
 
 const secondVegetable = {
     name: 'Leek',
@@ -141,8 +152,8 @@ function getTotalQuantity(productList){
     return totalQuantity;
 }
 
-getTotalQuantity(fruits);
-getTotalQuantity(vegetables);
+// getTotalQuantity(fruits);
+// getTotalQuantity(vegetables);
 
     
     // console.log('Total number of fruit is ' + totalFruits)
@@ -161,8 +172,8 @@ getTotalQuantity(vegetables);
         return totalScore/productList.length;
     }
 
-    console.log(getAverageScore(fruits)); // function execution
-    console.log(getAverageScore(vegetables));
+    // console.log(getAverageScore(fruits)); // function execution
+    // console.log(getAverageScore(vegetables));
     
     // console.log('The average score is ' + totalScore/fruits.length);
 
@@ -193,7 +204,7 @@ let phrase = "This is long enough for a string to count it words";
 
 let words = phrase.split(" ");
 
-console.log(words);
+// console.log(words);
 
 
 function addTwoNumbers(first, second){
@@ -206,8 +217,8 @@ function addTwoNumbers(first, second){
 
 }
 
-console.log(addTwoNumbers(76,22));
-console.log(addTwoNumbers(8798,8939));
+// console.log(addTwoNumbers(76,22));
+// console.log(addTwoNumbers(8798,8939));
 
 const numbers = [9, 7474, 23,958]
 
@@ -234,4 +245,6 @@ function sumTest(array) {
     return sum;
 }
 
-  console.log(sumTest(2))
+//   console.log(sumTest(2))
+
+  

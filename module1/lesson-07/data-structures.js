@@ -1,5 +1,5 @@
-// Get the value of the first student’s name
-// Get the age of the student named Sarah
+
+// Create a function getRandomStudent that will get a student out of the array
 const students = [
     { name: "Bob", age: 17 },
     { name: "Susy", age: 18 },
@@ -8,19 +8,36 @@ const students = [
     { name: "Bill", age: 19 }
   ];
 
-// Get the value Bill to display
-// Get the value Thomas to display
+
+  // console.log(students[0].name);   // Get the value of the first student’s name
+  // console.log(students[3].age) // Get the age of the student named Sarah
+
+  function getRandomStudent(studentsArray){
+    // Generate a random number which will be within the range of index positions of studentsArray
+    // Use that number to extract a random student
+    // Math.random() ---> 0.01
+    // studentsArray.length ---> 5
+    // Math.random() * 5 --> 0.05
+    // Math.floor(Math.random() * 5) --> 0
+    const randomIndex = Math.floor(Math.random() * studentsArray.length) // generate a rando number
+    return studentsArray[randomIndex] // get a random student
+  }
+  console.log( 'random student', getRandomStudent(students))
+classes[0][0].firstName
   const twoD = [
     ["Bob", "Susy", "Ted"],
     ["Lilly", "Sarah", "Bill"],
     ["Thomas", "Barry", "Alex"]
   ];
 
+  console.log(twoD[1][2]); // Get the value Bill to display
+  console.log(twoD[2][0]); // Get the value Thomas to display
+
   // Student example with multiple classrooms
 
   // Retrieve the second “classroom” of students
   // Retrieve the first name “Antonette”
-  //  Retrieve the age 18
+  // Retrieve the age 18
   // Retrieve the last name “Beatty”
   const classes = [
     [
@@ -93,12 +110,12 @@ const students = [
     ]
   };
 
-  console.log(classRoomSystem.teacher.age);
-  console.log(classRoomSystem.students[3].firstName);
+  // console.log(classRoomSystem.teacher.age);
+  // console.log(classRoomSystem.students[3].firstName);
 
   // School with Classroom System Example
 
-  // Get Second's classroom Teacher's age
+  // Get the second's classroom Teacher's age
   // Create a function getAgeAverage that takes in a single parameter "students"
   // It should iterate over the list of students and return the average age of the class
   // i.e: Class average age is 21 years old
@@ -129,20 +146,6 @@ const students = [
     ]
   }
 
-  // console.log(school.classRooms[1].teacher.age);
-
-  // for(let i =0; i < school.classRooms.length; i++){
-  //   for(let j = 0; j < school.classRooms[i].students.length; j++){
-  //     console.log(school.classRooms[i].students[j].lastName)
-  //   }
-  // }
-
-// let studentsList = [];
-// for(let i =0; i < school.classRooms.length; i++){
-//   studentsList = studentsList.concat(school.classRooms[i].students);
-// }
-
-// console.log('studentsList: ', studentsList);
 const classRoom1 = {
   teacher:  {
     firstName: 'Greg',
@@ -155,15 +158,3 @@ const classRoom1 = {
     }
   }
 };
-
-Object.keys(classRoom1).forEach(function(prop) {
-  console.log(classRoom1[prop]);
-  if(typeof prop === 'object'){
-    Object.keys(prop).forEach(function(innerProp){
-      //console.log(prop[innerProp]);
-    })
-  }
- 
-  // `prop` is the property name
-  // `data[prop]` is the property value
-});
