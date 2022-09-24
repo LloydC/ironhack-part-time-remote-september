@@ -24,7 +24,12 @@ for(let i = 0; i < secondNewArray.length; i++){
 }
 
 
-console.log(newArray);
-console.log(secondNewArray);
-console.log(thirdNewArray);
-console.log(fourthArray)
+// console.log(newArray);
+// console.log(secondNewArray);
+// console.log(thirdNewArray);
+// console.log(fourthArray)
+
+const randomNumber1 = Math.random() * 6;
+const randomRoundedNumber = Math.floor(randomNumber1)
+console.log('randomNumber1', randomNumber1)
+console.log('randomRoundedNumber', randomRoundedNumber)
