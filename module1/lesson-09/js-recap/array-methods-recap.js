@@ -48,6 +48,9 @@ let cars = [
         capacity: 4
       }
 ]
+const highCapacityCars = cars.filter(car => car.capacity > 4);
+console.log(cars.length)
+console.log(highCapacityCars.length)
 
 // 1. Create a variable "whiteCars" with all the cars with a color "white"
 
