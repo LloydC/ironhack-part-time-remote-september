@@ -134,5 +134,5 @@ function removeContent(){
     // target the element
     const thirdLiElement = document.getElementById('thirdMouse');
     // update its content using .innerText
-    thirdLiElement.innerText = '';
+    // thirdLiElement.innerText = '';
 }
