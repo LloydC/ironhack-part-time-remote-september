@@ -1,5 +1,5 @@
 {
-  "name": "my-first-node",
+  "name": "http-server",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
@@ -8,9 +8,5 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "colors": "^1.4.0",
-    "dog-names": "^2.1.0"
-  }
+  "license": "ISC"
 }
