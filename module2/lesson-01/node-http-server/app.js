@@ -1,4 +1,8 @@
 const http = require('http'); // loads the in-built http package
+const example = require('./example');
+console.log(example.sayHello());
+console.log(example.sayGoodbye());
+
 const server = http.createServer((request, response) => {
     if (request.url === '/') {
         response.write('Welcome to the Homepage');
