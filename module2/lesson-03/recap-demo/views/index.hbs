@@ -1,0 +1,43 @@
+
+{{!-- <h1>Welcome {{firstName}} to the homepage</h1>
+{{#if lastName}}
+    <p>Your last name is {{lastName}}</p>
+{{/if}}
+
+{{#with address}}
+  <p>{{street}}, {{number}}</p>
+{{/with}} --}}
+
+{{> user}}
+
+
+<h2>Cities user has lived in:</h2>
+<ul>
+    {{#each citiesLived }}
+        {{#if @first}}
+            <li>First city lived in {{this}}</li>
+        {{else}}
+            <li>{{this}}</li>
+        {{/if}}
+    {{/each}}
+</ul>
+
+{{#if likesBanana}}
+    <p>Advertisement for bananas</p>
+    {{else}}
+    <p>Doesn't like bananas</p>
+{{/if}}
+
+{{#unless likesCoffee}}
+    <p>Advertisement for Coffee</p>
+{{/unless}}
+
+{{!-- 
+
+{{#if likesTea}}
+    <p>Advertisement for tea</p>
+{{/if}}
+
+{{#if likesBothCoffeeAndTea}}
+    <p>Advertisement for Coffee and Tea</p>
+{{/if}} --}}
