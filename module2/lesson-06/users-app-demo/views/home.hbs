@@ -1,0 +1,6 @@
+<h2>Users List Page</h2>
+<ul>
+    {{#each users}}
+        <li><a href="/profile/{{this.username}}">User {{this.username}}</a></li>
+    {{/each}}
+</ul>
