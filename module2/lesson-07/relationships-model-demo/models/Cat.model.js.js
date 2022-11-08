@@ -1,5 +1,7 @@
-const mongoose = require('mongoose')
-const Schema = mongoose.Schema
+const mongoose = require('mongoose');
+// const { messageSchema } = require('./Message.model');
+
+const Schema = mongoose.Schema;
 
 const message = new Schema({
     title: String,
@@ -11,8 +13,8 @@ const catSchema = new Schema({
     age: Number,
     bio: String,
     dateOfBirth: Date,
+    message: message,
     foods: [{type: Schema.Types.ObjectId, ref: 'Food'}],
-    message: message
 })
 
 const Cat = mongoose.model('Cat', catSchema)

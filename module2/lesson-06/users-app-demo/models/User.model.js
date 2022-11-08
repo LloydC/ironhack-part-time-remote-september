@@ -21,7 +21,10 @@ const userSchema = new Schema({
                         enum: ['Married', 'Single'],
                         default: 'Single'
                      }
-                    });
+                    }, 
+                    {
+                     timestamps: true
+                   });
 
 const User = model('User', userSchema);
 

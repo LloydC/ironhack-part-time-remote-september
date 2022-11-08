@@ -1,4 +1,7 @@
 const mongoose = require('mongoose');
+
+const Cat = require('./models/cat');
+const Food = require('./models/food');
 // Make a connection to the db
 mongoose
   .connect('mongodb://localhost/catbook', {useNewUrlParser: true})
@@ -9,9 +12,8 @@ mongoose
     console.error('Error connecting to mongo', err)
   });
 
-const Cat = require('./models/cat');
-const Food = require('./models/food');
-  // const Food = require('../models/food');
+
+
 // Query the db for Wiggles
 // Update the document Wiggles with Tuna's id
 // Cat.findOneAndUpdate({name: 'Wiggles'}, {foods: ['62f4f7a15682d14cdfd8123e','62f4f7a15682d14cdfd81240', ]}, {new: true})
@@ -23,6 +25,8 @@ const Food = require('./models/food');
 //           });
 //     })
 //     .catch(err => console.log(err));
+
+
 // Add an embedded message example
 // Cat.findOne({name: 'Admin'})
 //   .then(cat => {
@@ -40,21 +44,20 @@ const Food = require('./models/food');
 //         });
 //     })
 //     .catch(err =>console.log(err));
-// get the 
-// const cat = async () =>  await Cat.findOne({name: 'Wiggles'}).populate("foods");
-// const result = cat();
-// console.log(result)
 
-Cat.findOne({name: 'Wiggles'})
-.populate("foods")
-.then(result => console.log('result: ', result))
-.then(()=>{
-            mongoose.connection.close(() => {
-                console.log(`Mongo connection disconnected`);
-                process.exit(0);
-              });
-})
-.catch(err => console.log(err))
+
+// get the cat and foods
+
+// Cat.findOne({name: 'Wiggles'})
+// .populate("foods")
+// .then(result => console.log('result: ', result))
+// .then(()=>{
+//             mongoose.connection.close(() => {
+//                 console.log(`Mongo connection disconnected`);
+//                 process.exit(0);
+//               });
+// })
+// .catch(err => console.log(err))
 
 
 // Close my connection to the db

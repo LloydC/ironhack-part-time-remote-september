@@ -49,15 +49,18 @@ router.get("/books/:id/edit", (req, res) => {
 });
 
 router.post("/books/:id/edit", (req, res) => {
-  const { id } = req.params;
-  const { title, description, author, rating } = req.body;
+  const { id } = req.params; // book identifier
+  const { title, description, author, rating } = req.body; // book modifier values
 
   Book.findByIdAndUpdate(
     id,
     { title, description, author, rating },
     { new: true }
   )
-    .then(() => res.redirect(`/books/${id}`))
+    .then((updatedBook) => {
+      console.log(updatedBook)
+      res.redirect(`/books/${id}`)
+    })
     .catch((error) =>
       console.log(`Error while updating a single book: ${error}`)
     );

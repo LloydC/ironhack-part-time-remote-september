@@ -1,3 +1,4 @@
+require("dotenv").config(); // Loads the values from .env file to process.env
 const hbs = require("hbs"); // Views
 const path = require("path"); // joins two directories or files
 const axios = require("axios"); // make calls to external APIs
@@ -5,7 +6,7 @@ const morgan = require("morgan"); // logger, show on the terminal which route wa
 const express = require("express"); // used to make express server + application
 const app = express();
 const PORT = 8000;
-require("dotenv").config(); // Loads the values from .env file to process.env
+
 
 hbs.registerPartials(__dirname + "/views/partials");
 
@@ -32,6 +33,7 @@ app.get("/searchResults", (req, res) => {
     )
     .then((OMDBResponse) => {
       const { Search, totalResults } = OMDBResponse.data;
+      console.log(OMDBResponse.data)
 
       res.render("search-results", { movieName, Search, totalResults });
     })
@@ -57,7 +59,8 @@ app.get("/movie/:movieId", (req, res) => {
 
 app.post("/searchResults", (req, res) => {
   const { movieName } = req.body;
-
+    console.log('req body', req.body);
+    
     axios
     .get(
       `http://www.omdbapi.com/?apikey=${process.env.OMDB_API_Key}&s=${movieName}&page=10`
