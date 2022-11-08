@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 
+// set a connection to the db
 mongoose
   .connect('mongodb://localhost/catbook', {useNewUrlParser: true})
   .then(x => {
@@ -9,7 +10,7 @@ mongoose
     console.error('Error connecting to mongo', err)
   });
 
-  const Food = require('../models/food');
+  const Food = require('../models/Food.model');
 
  
   const foods = [{
@@ -21,9 +22,10 @@ mongoose
 },{
     name: 'Catnip',
 }]
-
+// create some entries in your db
   Food.insertMany(foods)
     .then(food => {
         console.log('created food: ', food)
+        //close the connection
         mongoose.disconnect()
     })

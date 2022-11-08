@@ -1,13 +1,30 @@
 const mongoose = require('mongoose');
 
-const Cat = require('./models/cat');
-const Food = require('./models/food');
+const Cat = require('./models/Cat.model');
+const Food = require('./models/Food.model');
+const { Message } = require('./models/Message.model');
 // Make a connection to the db
 mongoose
   .connect('mongodb://localhost/catbook', {useNewUrlParser: true})
   .then(x => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
+  // .then(()=>{
+  //   return Message.create({title: 'Hello', body: 'this is my message'})
+  // })
+  // .then(message => {
+  //   return Cat.findOneAndUpdate({name: 'Admin'}, {message: message}, {new: true})
+  // } )
+  .then(()=> Food.findOne({name: 'Cheese Sticks'})) // querying for a new food to be added
+  .then(food => { // {name: 'Whisakas}
+      const updatedCat =  Cat.findOne({name: 'Wiggles'}).then(foundCat => {
+        const updateFoodsArray = foundCat.foods.push(food._id) // updating the cat foods array
+        return foundCat.save(); // saving that change in the DB
+      })
+    return updatedCat
+      }
+    )
+  .then(cat => console.log('cat update', cat))
   .catch(err => {
     console.error('Error connecting to mongo', err)
   });
