@@ -1,0 +1,14 @@
+<h1>Books list page</h1>
+
+<form method="GET" action="/books/search" >
+    <input name="bookName" type="text">
+    <button type="submit">Search Book</button>
+</form>
+
+<ul>
+    {{#each books}}
+    <li> 
+        <a href="/books/{{_id}}">{{title}}</a>
+    </li>
+    {{/each}}
+</ul>

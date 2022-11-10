@@ -1,0 +1,4 @@
+// CheckInDate
+// CheckOutDate
+// Payment
+// UserId
