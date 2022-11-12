@@ -1,4 +1,0 @@
-// Author
-// Date
-// Comment
-// PropertyId
