@@ -1,15 +1,9 @@
 const router = require('express').Router();
-
 const Book = require('../models/Book.model.js');
+const { getAllBooksController, getCreateBookController} = require('../controllers/index')
  
 // GET route to retrieve and display all the books
-router.get('/', (req, res) => {
-    Book.find()
-        .then(dbBooks => {
-            res.render('books/books-list.hbs', { books: dbBooks })
-        })
-        .catch(err => console.log(err))
-});
+router.get('/', getAllBooksController);
 
 
 router.get('/search', (req, res) => {
