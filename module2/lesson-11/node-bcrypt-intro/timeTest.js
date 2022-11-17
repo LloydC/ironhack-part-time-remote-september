@@ -1,6 +1,6 @@
 const bcrypt = require("bcrypt");
 const plainPassword1 =
-  "HelloWorldjksdbfkdjsbnfkljsdnflkjndslkfjanldkjfnlsdkjbflkasdjbflkjsadbnflkjabdklfjblkasjb";
+  "HelloWorld";
 
 for (let saltRounds = 10; saltRounds < 19; saltRounds++) {
   console.time(`bcrypt | cost: ${saltRounds}, time to hash`);
