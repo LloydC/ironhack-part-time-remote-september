@@ -1,0 +1,59 @@
+<h1>Welcome to the details page of the {{ room.name }}</h1>
+<hr>
+<p>This room was posted by: <b> {{ room.owner.fullName }} </b></p>
+<h3>Description:</h3>
+<p> {{ room.description }}</p>
+<hr>
+<h3>Gallery:</h3>
+<img src="{{room.imageUrl}}" alt="" width="300">
+
+{{#if isOwner}}
+  <form action="/rooms/edit/{{room._id}}" method="POST"  enctype="multipart/form-data">
+  <label for="">Name</label>
+  <br/>
+  <input type="text" name="name" value="{{room.name}}">
+  <br/> 
+  <label for="">Description</label>
+  <br/>
+  <textarea name="description" cols="20" rows="5" value="{{room.description}}">{{room.description}}</textarea>
+  <br/>
+  <label for="">Add image</label>
+  <br/>
+  <input type="file" name="imageUrl" value="{{room.imageUrl}}">
+  <br/>
+  <br/>
+  <button type="submit">Update room</button>
+</form>
+  <br/>
+  <form action="/rooms/delete/{{room._id}}" method="post">
+    <button type="submit">Delete this room</button>
+  </form>
+{{/if}}
+
+{{!-- if there are reviews, show them, if not, forget about it 🙃 --}}
+{{#if changeableReviews}}
+  <h3>Reviews:</h3>
+  {{#each changeableReviews}}
+  <div style="display: flex;">
+     <p> <b>{{ this.user.fullName }} said: </b> {{ this.comment }}</p>
+    {{#if this.isChangeable}}
+      <a href="/reviews/edit/{{this._id}}">Edit</a>
+      <form action="/reviews/delete/{{this._id}}" method="POST">
+        <button type="submit"> Delete </button>
+      </form>
+  </div>
+   
+    {{/if}}
+  {{/each}}
+{{/if}}
+
+<hr>
+{{!-- USER CAN NOT LEAVE REVIEWS ON THEIR OWN PROPERTIES --}}
+{{!-- this means that only if the user IS NOT the owner, this form will be shown --}}
+{{#if isNotOwner}}
+  <h2>Add a review:</h2>
+  <form action="/reviews/create/{{room._id}}" method="POST">
+    <textarea name="comment" id="" cols="10" rows="5"></textarea>
+    <button type="submit">Add</button>
+  </form>
+{{/if}}
