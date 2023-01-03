@@ -1,0 +1,13 @@
+.App {
+  text-align: center;
+  background-color: burlywood;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.global-image {
+  width: 100px;
+  height: 100px;
+}
