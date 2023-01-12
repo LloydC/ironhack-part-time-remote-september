@@ -1,10 +1,13 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import moviesData from '../movies-data.json'; // import the array of movie objects
 import MovieCard from './MovieCard';
 function MovieList() {
   const [movies, setMovies] = useState(moviesData);  // Declare a state variable "movies" and set the array from movies-data.json as the initial state
   const [showMovies, setShowMovies] = useState(true); // controls the display of the list of movies
 
+  useEffect(()=>{
+    console.log('hi :)')
+  }, [])
   const toggleShowMovies = () => {
     setShowMovies(!showMovies);
   };

@@ -7,8 +7,6 @@ import './App.css';
 function App() {
   // Declare a new state variable, which we'll call "isLoading"
   const [isLoading, setIsLoading] = useState(true); // <-- add
-  
- 
 
   useEffect(()=>{
     setTimeout(()=> setIsLoading(false), 3000)
