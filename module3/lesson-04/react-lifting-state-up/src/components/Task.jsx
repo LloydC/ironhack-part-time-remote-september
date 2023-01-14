@@ -1,5 +1,6 @@
 function Task(props) {
-    const { task, toggleTaskDone } = props;
+  console.log(props)
+    const { task, toggleTaskDone } = props; // const task = props.task;
 //   const [taskCompleted, setTaskCompleted] = useState(false);
  
 //   const toggleTask = () => setTaskCompleted(!taskCompleted);

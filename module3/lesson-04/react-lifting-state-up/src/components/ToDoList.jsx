@@ -2,6 +2,7 @@ import { useState } from "react";
 import Task from "./Task";
 import Summary from "./Summary";
 import TaskForm from "./TaskForm";
+import Button from "./Button";
  
 const initialTasks = [
     {
@@ -53,11 +54,12 @@ function ToDoList() {
       <Summary tasksCompleted={tasksCompleted} />
       
       <div className="todo-container">
-        {tasks.map((task) => <Task key={task._id} task={task} toggleTaskDone={toggleTaskDone}/> )}
+        {tasks.map((task) => <Task key={task._id} task={task} toggleTaskDone={toggleTaskDone} /> )}
       </div>
 
         <button onClick={()=> setDisplayForm(!displayForm)}>{displayForm ? 'Hide Form' : 'Show Add Form'}</button>
       {displayForm && <TaskForm tasks={tasks} setTasks={setTasks} />}
+      <Button test={"test"} testTwo={0} testThree={{}} />
     </div>
   );
 }
