@@ -1,6 +1,7 @@
 require("dotenv/config");
 require("./db");
 const express = require("express");
+const { isAuthenticated } = require("./middleware/jwt.middleware")
 
 const app = express();
 
@@ -11,10 +12,10 @@ const allRoutes = require("./routes");
 app.use("/api", allRoutes);
 
 const projectRouter = require("./routes/project.routes");
-app.use("/api", projectRouter);
+app.use("/api", isAuthenticated, projectRouter);
 
 const taskRouter = require("./routes/task.routes");
-app.use("/api", taskRouter);
+app.use("/api", isAuthenticated, taskRouter);
 
 const authRoutes = require("./routes/auth.routes");
 app.use("/auth", authRoutes);
